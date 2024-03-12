@@ -19,6 +19,8 @@ function getData(url) {
         .then(response => response.json())
         .then(data => addData(data))
         .catch(error => console.error(error));
+    
+    
 }
 
 function callServer(event) {
@@ -26,6 +28,7 @@ function callServer(event) {
     let textboxcontents = document.getElementById('textbox_id').value;
     const url = `https://api.escuelajs.co/api/v1/products?title=${textboxcontents}`;
     getData(url);
+
 }
 
 /*
